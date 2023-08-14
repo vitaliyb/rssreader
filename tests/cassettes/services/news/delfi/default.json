@@ -1,0 +1,75 @@
+[{
+    "request": {
+        "method": "GET",
+        "url": "https:\/\/www.delfi.lv\/rss\/?channel=delfi",
+        "headers": {
+            "Host": "www.delfi.lv",
+            "Accept-Encoding": "",
+            "User-Agent": "GuzzleHttp\/7",
+            "Accept": ""
+        }
+    },
+    "response": {
+        "status": {
+            "code": 200,
+            "message": "OK"
+        },
+        "headers": {
+            "Date": "Mon, 14 Aug 2023 19:49:53 GMT",
+            "Content-Type": "application\/xml",
+            "Transfer-Encoding": "chunked",
+            "Connection": "keep-alive",
+            "content-security-policy": "upgrade-insecure-requests",
+            "Cache-Control": "max-age=300",
+            "vary": "Accept-Encoding",
+            "Age": "47",
+            "CF-Cache-Status": "HIT",
+            "Set-Cookie": "__cf_bm=FPUs6EAVbFp3MPsNfscvrF.mWofi2dbkczbu1_xdrE8-1692042593-0-AT3LAX17JQdhsYG7OCfOjudB2ll2oRnKsDsSGGathERlizNaNPTojqs93fx5EojCF3WtmYtruMLJtQG+7kR8jIA=; path=\/; expires=Mon, 14-Aug-23 20:19:53 GMT; domain=.delfi.lv; HttpOnly; Secure; SameSite=None",
+            "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+            "X-Content-Type-Options": "nosniff",
+            "Server": "cloudflare",
+            "CF-RAY": "7f6bb940eaffb80f-RIX"
+        },
+        "body": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<rss version=\"2.0\" xmlns:atom=\"http://www.w3.org/2005/Atom\" xmlns:media=\"http://search.yahoo.com/mrss/\" xmlns:slash=\"http://purl.org/rss/1.0/modules/slash/\">\n\t<channel>\n\t\t<title><![CDATA[Ziņas]]></title>\n\t\t<link>https://www.delfi.lv</link>\n\t\t<description><![CDATA[Jaunākās ziņas]]></description>\n\t\t<language>lv</language>\n\t\t<copyright>A/S DELFI, 2023. All rights reserved.</copyright>\n\t\t<lastBuildDate>Mon, 14 Aug 2023 21:33:06 +0300</lastBuildDate>\n\t\t<generator>AS Delfi, https://www.delfi.lv/</generator>\n\t\t<image>\n\t\t\t<url>http://g.delfi.lv/d/i/rss/230x139_DELFI_logo.png</url>\n\t\t\t<link>https://www.delfi.lv</link>\n\t\t\t<title><![CDATA[Ziņas]]></title>\n\t\t</image>\n\t\t<atom:link href=\"https://www.delfi.lv/rss?channel=delfi\" rel=\"self\" type=\"application/rss+xml\" />\n\t\t\t\t\t\n\t\t\t\t\t\t<item><title><![CDATA[TestTitle]]></title><category>TestCategory</category><enclosure url=\"https://test.com/image.jpg\" type=\"image/png\" /><link>https://www.test.com</link><guid>https://www.test.com</guid><description><![CDATA[TestDescription]]></description><media:content url=\"http://test.com/image.jpg\" /><slash:comments>0</slash:comments><pubDate>Mon, 14 Aug 2023 20:31:05 +0300</pubDate></item>\n\t\t\t</channel>\n</rss>",
+        "curl_info": {
+            "url": "https:\/\/www.delfi.lv\/rss\/?channel=delfi",
+            "content_type": "application\/xml",
+            "http_code": 200,
+            "header_size": 692,
+            "request_size": 82,
+            "filetime": -1,
+            "ssl_verify_result": 0,
+            "redirect_count": 0,
+            "total_time": 0.051056,
+            "namelookup_time": 0.012451,
+            "connect_time": 0.016668,
+            "pretransfer_time": 0.027878,
+            "size_upload": 0,
+            "size_download": 22483,
+            "speed_download": 440359,
+            "speed_upload": 0,
+            "download_content_length": -1,
+            "upload_content_length": 0,
+            "starttransfer_time": 0.049829,
+            "redirect_time": 0,
+            "redirect_url": "",
+            "primary_ip": "172.67.38.134",
+            "certinfo": [],
+            "primary_port": 443,
+            "local_ip": "192.168.0.101",
+            "local_port": 62251,
+            "http_version": 2,
+            "protocol": 2,
+            "ssl_verifyresult": 0,
+            "scheme": "HTTPS",
+            "appconnect_time_us": 27711,
+            "connect_time_us": 16668,
+            "namelookup_time_us": 12451,
+            "pretransfer_time_us": 27878,
+            "redirect_time_us": 0,
+            "starttransfer_time_us": 49829,
+            "total_time_us": 51056
+        }
+    },
+    "index": 0
+}]
