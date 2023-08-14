@@ -32,7 +32,7 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $request->validate([
-            'email' => 'required|string|email|max:255|unique:'.User::class,
+            'email' => $this->getEmailValidationRule(),
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
         ]);
 
@@ -46,5 +46,17 @@ class RegisteredUserController extends Controller
         Auth::login($user);
 
         return redirect(RouteServiceProvider::HOME);
+    }
+
+    private function getEmailValidationRule()
+    {
+        return 'required|string|email|max:255|unique:'.User::class;
+    }
+
+    public function validateEmail(Request $request)
+    {
+        $request->validate([
+            'email' => $this->getEmailValidationRule(),
+        ]);
     }
 }

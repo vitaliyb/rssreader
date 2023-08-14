@@ -5,6 +5,8 @@ import InputLabel from '@/Components/InputLabel.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import TextInput from '@/Components/TextInput.vue';
 import { Head, Link, useForm } from '@inertiajs/vue3';
+import {watch} from "vue";
+import debounce from 'lodash.debounce';
 
 const form = useForm({
     name: '',
@@ -18,6 +20,18 @@ const submit = () => {
         onFinish: () => form.reset('password', 'password_confirmation'),
     });
 };
+// POI: figure out how to watch only single input, not whole form
+watch(form, debounce(() => {
+    axios.post(route('validate-email'), {
+        email: form.email
+    })
+        .then(function (response) {
+            form.errors.email = null;
+        })
+        .catch(function (error) {
+            form.errors.email = error.response.data.message;
+        });
+}, 500))
 </script>
 
 <template>
