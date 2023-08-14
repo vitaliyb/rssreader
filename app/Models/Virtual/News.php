@@ -19,8 +19,8 @@ class News
 
     public function __construct(SimpleXMLElement $xml)
     {
-        $this->title = (string)$xml->title;
-        $this->category = (string)$xml->category;
+        $this->title = htmlspecialchars_decode((string)$xml->title);
+        $this->category = htmlspecialchars_decode((string)$xml->category);
         $this->guid = (string)$xml->guid;
         $this->description = htmlspecialchars_decode((string)$xml->description);
         $this->postedAt = Carbon::parse($xml->pubDate)->format('d.m.Y H:i');
